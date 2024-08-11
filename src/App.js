@@ -4,7 +4,7 @@ import logo from "./logo.jpg";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Access your API key as an environment variable.
-const genAI = new GoogleGenerativeAI("AIzaSyDD8RGgCLS6F8yArsncoVFVtJCKFLeHkQg");
+const genAI = new GoogleGenerativeAI(process.env.REACT_APP_API_KEY);
 const model = genAI.getGenerativeModel({
   model: "gemini-1.5-flash",
   generationConfig: { maxOutputTokens: 200, temperature: 2 },
