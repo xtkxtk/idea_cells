@@ -1,0 +1,98 @@
+/* App.css */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 상단 정렬 */
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  height: 100vh;
+}
+
+.header {
+  background-color: white;
+  height: 70px; /* 헤더 높이 정의 */
+  color: white;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  position: fixed; /* 상단에 고정 */
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.treeContainer {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(auto-fill, 100px);
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.treeNode {
+  position: relative;
+}
+
+.cell {
+  background-color: #007bff;
+  color: #f8f9fa;
+  font-weight: bold;
+  padding: 10px;
+  margin: 5px;
+  min-width: 120px;
+  min-height: 50px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  text-align: center;
+}
+
+.cell.selected {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #007bff;
+}
+
+.svg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* SVG 위에서 클릭 이벤트를 막습니다. */
+}
+
+.mergeButton {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.mergeButton:hover {
+  background-color: #218838;
+}
+
+.connection-line {
+  position: absolute;
+  border-left: 2px solid black;
+  background-color: black;
+  transform-origin: 0 0;
+}
