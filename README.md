@@ -1,70 +1,73 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Idea Cells
 
-## Available Scripts
+Idea Cells는 아이디어를 생성하고 관리하는 웹 애플리케이션입니다. 사용자는 주제를 입력하고, 이를 바탕으로 하위 아이디어를 생성하거나 여러 아이디어를 병합하여 새로운 아이디어를 생성할 수 있습니다. 이 애플리케이션은 Google Generative AI 모델을 사용하여 아이디어를 자동으로 생성합니다.
 
-In the project directory, you can run:
+## 주요 기능
 
-### `npm start`
+- **아이디어 생성**: 입력된 주제를 기반으로 3개의 하위 아이디어를 생성합니다.
+- **아이디어 병합**: 선택된 여러 아이디어를 병합하여 하나의 새로운 아이디어를 생성합니다.
+- **다중 선택 및 병합**: Ctrl 키를 사용하여 여러 아이디어를 선택하고 병합할 수 있습니다.
+- **셀 위치 자동 조정**: 생성된 아이디어 셀의 위치가 자동으로 조정됩니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 설치 방법
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **레포지토리 클론**:
 
-### `npm test`
+   ```bash
+   git clone https://github.com/yourusername/idea-splitter-merger.git
+   cd idea-splitter-merger
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **패키지 설치**:
 
-### `npm run build`
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **환경 변수 설정**:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   프로젝트 루트 디렉토리에 `.env` 파일을 생성하고, Google Generative AI API 키를 추가하세요.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```plaintext
+   REACT_APP_API_KEY=your_actual_api_key_here
+   ```
 
-### `npm run eject`
+4. **개발 서버 실행**:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   브라우저에서 `http://localhost:3000`에 접속하여 애플리케이션을 확인할 수 있습니다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 사용 방법
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **아이디어 생성**: 셀을 더블 클릭하여 아이디어를 생성할 수 있습니다.
+- **아이디어 병합**: Ctrl 키를 누른 상태에서 여러 셀을 클릭한 후, 병합 버튼을 클릭하여 아이디어를 병합할 수 있습니다.
+- **셀 편집**: 셀을 클릭하여 텍스트를 편집할 수 있습니다.
 
-## Learn More
+## 기술 스택
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **프론트엔드**: React, JavaScript, HTML, CSS
+- **AI 모델**: Google Generative AI (Gemini 1.5 Flash)
+- **스타일링**: CSS Grid
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 주의 사항
 
-### Code Splitting
+- **API 키 보안**: `.env` 파일에 API 키를 저장하고, 이 파일을 `.gitignore`에 추가하여 깃허브에 업로드되지 않도록 주의하세요.
+- **빌드 시 주의**: `REACT_APP_`으로 시작하는 환경 변수만 빌드에 포함되므로, API 키 설정 시 주의가 필요합니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 기여 방법
 
-### Analyzing the Bundle Size
+1. 이 레포지토리를 포크합니다.
+2. 새로운 브랜치를 만듭니다. (`git checkout -b feature/your-feature-name`)
+3. 기능을 추가하거나 버그를 수정합니다.
+4. 변경 사항을 커밋합니다. (`git commit -m 'Add your message here'`)
+5. 브랜치를 푸시합니다. (`git push origin feature/your-feature-name`)
+6. Pull Request를 생성합니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 라이선스
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 [LICENSE](./LICENSE) 파일을 참조하세요.
+```
